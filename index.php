@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-// $_SESSION['$id']='swing';
-// $_SESSION['$pw']='11111';
+$_SESSION['$id']='swing';
+$_SESSION['$pw']='11111';
 $user=$_SESSION['$id'];
 $passwd=$_SESSION['$pw'];
 
