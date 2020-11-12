@@ -1,12 +1,10 @@
 <?php
 session_start();
 
-$_SESSION['$id']='swing';
-$_SESSION['$pw']='11111';
-$user=$_SESSION['$id'];
-$passwd=$_SESSION['$pw'];
+$user=$_SESSION['id'];
+$passwd=$_SESSION['pw'];
 
-if (!isset($_SESSION['$id'])){
+if (!isset($_SESSION['id'])){
  ?>
  <script>
    location.replace("./login.html")
