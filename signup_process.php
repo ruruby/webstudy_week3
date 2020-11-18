@@ -22,7 +22,7 @@ else{
   $query="select * from member where name='{$_POST['id']}' or email='{$_POST['email']}';";
   // $result_check=$conn->query($query);
   $result_check=mysqli_query($conn, $query) or die("query error");
-  if ($result_check==false){?>
+  if ($result_check==true){?>
       <script>
       alert("이미 가입한 회원입니다. 본인의 아이디나 이메일로 가입된 회원이 이미 존재합니다.");
       location.replace("./signup.html")
