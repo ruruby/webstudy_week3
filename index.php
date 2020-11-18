@@ -2,7 +2,8 @@
 session_start();
 
 $user=$_SESSION['id'];
-$passwd=$_SESSION['pw'];
+$passwd=$_SESSION['pwd'];
+
 
 if (!isset($_SESSION['id'])){
  ?>
