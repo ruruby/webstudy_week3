@@ -19,9 +19,9 @@ if ($_POST['id']=='' or $_POST['pwd']=='' or $_POST['name']=='' or $_POST['email
   <?php
 }
 else{
-  $query="select * from member where name='{$_POST['id']}' or email='{$_POST['email']}';";
+  $query="select * from member where id='{$_POST['id']}' or email='{$_POST['email']}';";
   // $result_check=$conn->query($query);
-  $result_check=mysqli_query($conn, $query) or die("query error");
+  $result_check=mysqli_query($conn, $query) or die("query error 중복체크");
   if (mysqli_fetch_assoc($result_check)>=1){?>
       <script>
       alert("이미 가입한 회원입니다. 본인의 아이디나 이메일로 가입된 회원이 이미 존재합니다.");
@@ -30,8 +30,7 @@ else{
   <?php
   }
   else {
-    $result=mysqli_query($conn, $sql) or die("query error");
-
+    $result=mysqli_query($conn, $sql) or die("query errorㅇㅇ");
        if($result==false){
          echo '오류가 발생하였습니다.';
        }

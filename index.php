@@ -17,11 +17,13 @@ else {
   echo "<font face='고딕' size='3'><b> $user 님</b>의 접속을 환영합니다</font><br>";
   echo "아이디 : $user <br> 비밀번호 : $passwd";
   ?>
+<form method="post" action="write_process.php">
   <input type="button" value="LOGOUT" onclick="location.href='logout.php'" style="float:right;">
   <br>
   <p><input type="text" name="title" placeholder="제목" style="width:510px;"></p>
   <p><textarea name="text" rows="25" cols="70" placeholder="내용을 입력해주세요."></textarea></p>
   <input type="submit" value="SUBMIT" style="float:right;">
+</form>
   <? include "mymytemplate.html"; ?>
   <?php
 }
